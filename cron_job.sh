@@ -8,7 +8,7 @@
 # |   |   |   |   |   Command output
 # |   |   |   |   |   |
 # Schedule script to inject database query results into log files by 7AM every day
-  0   7   *   *   *   /var/log/save_logs.sh
+  0   7   *   *   *   /var/save_logs.sh
 
 # Schedule the script to upload log files to Google Cloud Storage at 12 AM every day
-  0   0   *   *   *   /log/year/month/day//upload_to_googlecloud.sh
+  0   0   *   *   *   /var/upload_to_googlecloud.sh

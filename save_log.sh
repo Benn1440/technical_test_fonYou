@@ -13,4 +13,4 @@ LOG_FILE="${LOG_PATH}/sample.access.log-$(date +"%Y%m%d").log"
 mysql -h "${DB_HOST}" -u "${DB_USER}" -p"${DB_PASSWORD}" -D "${DB_NAME}" -e \
   "SELECT users.ID, users.Name, users.public_number, f.private_number
    FROM users 
-   JOIN fonyou_number f ON users.public_number = f.main_number;" > "${LOG_FILE}"
+   JOIN fonyou_number f ON users.public_number = f.main_number;" >> "${LOG_FILE}"

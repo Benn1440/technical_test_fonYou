@@ -9,4 +9,4 @@ GCS_INSTANCE="10.1.1.33"
 GCS_DEST_PATH="gs://${GCS_BUCKET}/log/$(date +"%Y/%m/%d")/"
 
 # Upload the log file to Google Cloud Storage
-gsutil cp "${LOG_PATH}/sample.access.log-$(date +"%Y%m%d").log" "${GCS_DEST_PATH}"
+gsutil cp "${LOG_PATH}/sample.access.log-$(date +"%Y%m%d").log" gs://"${GCS_INSTANCE}"/"${GCS_DEST_PATH}"
